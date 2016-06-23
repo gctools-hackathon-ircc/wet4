@@ -43,8 +43,10 @@ echo "<div><label>" . elgg_echo("friends:addfriends") . "</label>";
 echo elgg_view('input/friendspicker', array(
 	'entities' => $vars['friends'],
 	'name' => 'friends_collection',
+   'value' => $members,
 	'highlight' => $highlight,
-    'value' => $members
+    'collection_id' => $vars['collection']->id,
+	'formtarget' => $site_url . 'action/friends/collections/edit',
 ));
 echo "</div>";
 
@@ -55,7 +57,5 @@ if (isset($vars['collection'])) {
 		'value' => $vars['collection']->id,
 	));
 }
-echo elgg_view('input/submit', array('name' => 'submit', 'value' => elgg_echo('save'), 'class' => 'btn btn-primary mrgn-tp-md'));
+//echo elgg_view('input/submit', array('name' => 'submit', 'value' => elgg_echo('save'), 'class' => 'btn btn-primary'));
 echo '</div>';
-
-?>
