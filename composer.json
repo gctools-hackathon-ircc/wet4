@@ -1,5 +1,5 @@
 {
-    "name": "elgg/wet4",
+    "name": "gctools-hackathon-ircc/wet4",
     "type": "elgg-plugin",
     "require": {
         "composer/installers": ">=1.0.8"
